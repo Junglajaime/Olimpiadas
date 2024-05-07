@@ -1,29 +1,4 @@
-//// script.js
-//$(document).ready(function() {
-//    // Al hacer clic en el nombre de la olimpiada
-//    $("li").click(function() {
-//        // Simulamos la carga de las miniaturas
-//        $("#galeria").empty(); // Limpiamos la galería
-//        for (let i = 1; i <= 4; i++) {
-//            $("#galeria").append(`<img src="olimpiada${$(this).attr('id').slice(-1)}_${i}.jpg" class="miniatura">`);
-//        }
-//    });
-//
-//    // Al pasar el ratón sobre las miniaturas
-//    $(document).on("mouseenter", ".miniatura", function() {
-//        $(this).css("transform", "scale(1.1)");
-//    });
-//
-//    // Al salir el ratón de las miniaturas
-//    $(document).on("mouseleave", ".miniatura", function() {
-//        $(this).css("transform", "scale(1)");
-//    });
-//
-//    // Al hacer clic en una miniatura
-//    $(document).on("click", ".miniatura", function() {
-//        $("#visor-principal").html(`<img src="${$(this).attr('src')}" alt="Imagen grande">`);
-//    });
-//});
+
 $(function () {      
     $("#card1").on("click", function() {
         changeThumbnails("assets/pekin1.jpg", "assets/pekin2.jpg", "assets/pekin3.jpg", "assets/pekin4.jpg");
@@ -50,9 +25,16 @@ $(function () {
 });  
 
 $(document).ready(function() {
-$(".thumbnails img").on("click", function() {
-    var newSrc = $(this).attr("src");
-    $(".master img").attr("src", newSrc);
+    $(".thumbnails img").on("click", function() {
+        var newSrc = $(this).attr("src");
+        if (!$("#video").prop("paused")) {
+            $("#video").get(0).pause();
+            $("#video").hide();
+            $("#image").attr("src", newSrc).show();
+        } else {
+            $("#image").attr("src", newSrc);
+        }
+    });
 });
-});
+
 
