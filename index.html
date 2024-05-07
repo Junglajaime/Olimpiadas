@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Olimpiadas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+    <header>
+        <div class="banner text-center py-4">
+            <img src="assets/olimpics_banner.jpg" alt="Olympics Banner">
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 py-4" >
+                <nav class="bg-dark text-light contenedor-nav">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <div id="card1" class="card">
+                                <div class="card-body">
+                                    <img src="assets/bandera1.png" class="bandera-img" alt="Bandera 1">
+                                    <span class="ml-3">2008 Pekin</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="card2" class="card">
+                                <div class="card-body">
+                                    <img src="assets/bandera2.png" class="bandera-img" alt="Bandera 2">
+                                    <span class="ml-3">2012 Londres</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="card3" class="card">
+                                <div class="card-body">
+                                    <img src="assets/bandera3.webp" class="bandera-img" alt="Bandera 3">
+                                    <span class="ml-3">2016 Río de Janeiro</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <div id="card4" class="card">
+                                <div class="card-body">
+                                    <img src="assets/bandera4.jpg" class="bandera-img" alt="Bandera 4">
+                                    <span class="ml-3">2021 Tokio</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-8 py-4">
+                <div class="container">          
+                    <div class="master">  
+                        <img src="assets/default1.jpg">  
+                    </div>  
+                </div> 
+                <div class="thumbnails">    
+                    <img src="assets/default1.jpg">        
+                    <img class="active" src="assets/default2.jpg">  
+                    <img src="assets/default3.jpg">  
+                    <img src="assets/default4.jpg">  
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio autoplay loop controls>
+        <source src="assets/olimpics_theme.mp3" type="audio/mpeg">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+    <footer class="bg-dark text-light py-3 text-center">
+        <p>&copy; 2024 Galería de Olimpiadas. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
